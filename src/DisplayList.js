@@ -8,6 +8,7 @@ class DisplayList extends Component {
             isChecked: 'false'
         }
     }
+    // to allow checkbox to change based to the item 
     updChange = () => {
         if (this.state.isChecked === 'false') {
             this.setState({ isChecked: 'check' })
@@ -21,7 +22,6 @@ class DisplayList extends Component {
             <input type='checkbox' onChange={this.updChange.bind(this)} />
             <i className={this.state.isChecked} >{item}</i>
             <a href='#' onClick={this.props.delItem.bind(this, item)}><img src='https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color/700/010_trash-2-512.png' /></a>
-
         </li>
     }
 

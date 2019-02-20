@@ -15,6 +15,7 @@ class App extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
+  //handle the the commpnent of bakground images
   handleClick(e) {
     this.setState({
       mode: e.target.value,
@@ -24,41 +25,30 @@ class App extends Component {
   }
   //--------------------------------
 
+  //this function to allow the items that enterd by text into array
   submitForm(event) {
     event.preventDefault();
-
     const text = this.state.text
     const addItems = this.state.items.concat(text);
-
     this.setState({
       items: addItems,
       text: ''
     })
   }
-
+  // to allow user to write on input field
   changeForm(event) {
     const text = event.target.value
     this.setState({
       text: text
-
     })
-
   }
-
+  // to allow to delete each item 
   delItem(itemDeleted) {
     const addItems = this.state.items.filter((i) => {
       return i != itemDeleted
     })
     this.setState({ items: addItems })
   }
-
-  // clearAll(clear) {
-  //   let c = this.state.items.splice(0);
-  //   c.splice(this.state.text)
-  //   this.setState({
-  //     items: c
-  //   })
-  // }
   // -----------------
   render() {
     const { mode, background, how } = this.state;
@@ -81,6 +71,7 @@ class App extends Component {
       }
     }
     //-------------
+    // to allow output of written item to no dispaly befor first enter
     let hidePaper;
     if (this.state.items.length === 0) {
       // <div><h3>You have to prioritize this day </h3></div>
@@ -93,7 +84,6 @@ class App extends Component {
             delItem={this.delItem.bind(this)}
           />
         </div>
-        {/* <button class='clear' onClick={this.clearAll}>Clear All</button> */}
       </ul>
     }
     return (
@@ -116,7 +106,6 @@ class App extends Component {
           {/* <h3>your plans</h3> <br /> */}
           {hidePaper}
           <h2>BE<span class="colorTwo"> AMAZING</span> TODAY</h2>
-          {/* <button class='clear' onClick={this.clearAll}>Clear All</button> */}
         </form>
       </div>
     );
