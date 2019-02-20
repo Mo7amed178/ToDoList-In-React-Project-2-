@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 440px;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -30,4 +32,159 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* -------------------- */
+
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: 'Shadows Into Light', 'vutsive';
+  font-family: 'Caveat' 'cursive';
+  text-align: center;
+}
+.container {
+  opacity: 0.8;
+  filter: alpha(opacity=30);
+  background-color: rgb(255, 255, 255);
+  display: block;
+  width: 500px;
+  margin: 100px auto 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li * {
+  float: left;
+}
+li, h3 {
+  clear:both;
+  list-style:none;
+}
+input, button {
+  outline: none;
+}
+
+/* Heading */
+h3,
+label[for='new-task'] {
+  color: rgb(241, 10, 10);
+  font-weight: 700;
+  font-size: 25px;
+  /* border-bottom: 2px solid rgb(10, 63, 236); */
+  /* padding: 30px 0 10px; */
+  padding-top: 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  border: 1px solid rgb(161, 220, 247);
+  background: #fff;
+  border-radius: 6px;
+  font-family: 'Atma';
+  color: #888;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+
+/* New Task */
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px;
+}
+input#new-task {
+  width: 360px;
+}
+li {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 30px;
+}
+p > button:hover {
+  color: red;
+}
+img {
+  width: 30px;
+  height: 30px;
+}
+a {
+  float: right;
+}
+h2 {
+  color:red;
+  padding-bottom: 20px;
+}
+
+h2 .colorTwo {color:rgb(255, 0, 191);}
+
+.header {
+  width: 390px;
+  height: 100px;;
+}
+.check {
+  text-decoration: line-through;
+}
+i {
+  padding-left: 80px;
+}
+
+.letter {
+  color: rgb(44, 96, 238);
+  font-size: 70px;
+} 
+h4 {
+  font-size: 60px;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  width:30px;
+  height:30px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+}
+input[type='checkbox']:checked {
+  background: red;
+}
+/* Stacked paper effect */
+.letter {
+  background: rgb(219, 219, 219);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  max-width: 550px;
+  minheight: 300px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+}
+.letter:before, .letter:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.letter:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.letter:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
 }
