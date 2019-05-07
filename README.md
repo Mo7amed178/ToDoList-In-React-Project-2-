@@ -4,6 +4,8 @@ Is an aplication that allow user to add a list of things he wants to do
 # ScreenShot 
 ![alt text](https://f.top4top.net/p_1222jed861.png)
 
+![alt text](https://e.top4top.net/p_1222apafx1.png)
+
 ## Usage
 
 This project was completed by using:
